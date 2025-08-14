@@ -6,11 +6,32 @@ import router from './router'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue-next/dist/bootstrap-vue-next.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js' // 👈 Esto activa los dropdowns
-import { BCard, BButton } from 'bootstrap-vue-next'
+
 import 'bootstrap-icons/font/bootstrap-icons.css'
+
+import {
+    BCard,
+    BButton,
+    BTable,
+    BModal,
+    BForm,
+    BFormGroup,
+    BFormInput,
+    BFormSelect
+  } from 'bootstrap-vue-next'
+
 
 const app = createApp(App)
 app.use(router)
+
 app.component('b-card', BCard)
 app.component('b-button', BButton)
+app.component('b-table', BTable)
+app.component('b-modal', BModal)
+app.component('b-form', BForm)
+app.component('b-form-group', BFormGroup)
+app.component('b-form-input', BFormInput)
+app.component('b-form-select', BFormSelect)
+
+
 app.mount('#app')

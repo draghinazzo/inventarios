@@ -1,12 +1,11 @@
 <template>
   <div id="app" class="d-flex">
     <!-- Sidebar -->
-    <Sidebar :collapsed="sidebarCollapsed" @toggle="toggleSidebar" />
+    
 
     <!-- Main content -->
     <div class="flex-grow-1">
-      <Header @toggle-sidebar="toggleSidebar" :user="user" />
-
+     
       <main class="p-4">
         <h2>Bienvenido, {{ user.name }}</h2>
 
