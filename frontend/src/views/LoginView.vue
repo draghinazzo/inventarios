@@ -35,7 +35,7 @@
       localStorage.setItem('nombre', data.user.nombre)
       localStorage.setItem('apellido', data.user.apellido)
       localStorage.setItem('rol', data.user.rol)
-      router.push('/dashboard')
+      router.push('/home')
     } catch (err) {
       error.value = 'Credenciales incorrectas o error de conexión'
     }
