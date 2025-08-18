@@ -7,7 +7,7 @@
     <div class="flex-grow-1">
      
       <main class="p-4">
-        <h2>Bienvenido, {{ user.name }}</h2>
+        <h2>Bienvenido, {{ user.nombre }}</h2>
 
         <div class="row mt-4">
           <div class="col-md-4 mb-3" v-for="card in cards" :key="card.id">
@@ -30,8 +30,11 @@ import { ref } from 'vue';
 export default {
   components: { Sidebar, Header },
   setup() {
+    const user = ref({
+        nombre: localStorage.getItem('nombre'),
+        apellido: localStorage.getItem('apellido')
+      });
     const sidebarCollapsed = ref(false);
-    const user = ref({ nombre: localStorage.getItem('nombre'), apellido: localStorage.getItem('apellido') });
     const cards = ref([
       { id: 1, title: 'Usuarios', value: 120 },
       { id: 2, title: 'Pedidos', value: 75 },

@@ -17,7 +17,11 @@ import {
     BForm,
     BFormGroup,
     BFormInput,
-    BFormSelect
+    BFormSelect,
+    BDropdown,
+    BDropdownItem,
+    BDropdownDivider
+
   } from 'bootstrap-vue-next'
 
 
@@ -32,6 +36,9 @@ app.component('b-form', BForm)
 app.component('b-form-group', BFormGroup)
 app.component('b-form-input', BFormInput)
 app.component('b-form-select', BFormSelect)
+app.component('b-dropdown', BDropdown)
+app.component('b-dropdown-item', BDropdownItem)
+app.component('b-dropdown-divider', BDropdownDivider)
 
 
 app.mount('#app')

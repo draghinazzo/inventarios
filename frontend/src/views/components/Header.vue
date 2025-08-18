@@ -1,17 +1,16 @@
 <template>
-    <nav class="navbar navbar-light bg-light justify-content-end px-3">
-      <div class="dropdown">
-        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-          {{ user.nombre  }} {{ user.apellido  }}
-        </button>
-        <ul class="dropdown-menu dropdown-menu-end">
-          <li><a class="dropdown-item" href="#">Datos personales</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" @click="logout">Cerrar sesión</a></li>
-        </ul>
-      </div>
-    </nav>
-  </template>
+  <nav class="navbar navbar-light bg-light justify-content-end px-3">
+    <b-dropdown variant="outline-secondary" text="Opciones" class="me-2">
+      <template #button-content>
+        {{ user.nombre }} {{ user.apellido }}
+      </template>
+      <b-dropdown-item href="#">Datos personales</b-dropdown-item>
+      <b-dropdown-divider></b-dropdown-divider>
+      <b-dropdown-item @click="logout">Cerrar sesión</b-dropdown-item>
+    </b-dropdown>
+  </nav>
+</template>
+
   
   <script>
   import { useRouter } from 'vue-router'
